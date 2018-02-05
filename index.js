@@ -1,5 +1,5 @@
 /**
-    s: String to hast
+    s: String to hash
     darkColors: Whether to include brown, grey and blue-grey?
     accentColors: Whether to include accent colors (colors with prefix 'A')?
 */
@@ -11,18 +11,22 @@ exports.getColorFromNumber = function(x, darkColors, accentColors) {
 }
 
 /* Helpers */
-function getColorFromString(s, darkColors, specialColors, accentColors) {
-  var maxColor = darkColors ? 18 : 15;
-  var maxTone = accentColors ? 13 : 9;
+function getColorFromString(s, darkColors, accentColors) {
+  if (s && s.length > 0) {
+    var maxColor = darkColors ? 18 : 15;
+    var maxTone = accentColors ? 13 : 9;
 
-  var color = djb2(s) % maxColor;
-  //If color is a dark color, don't include accent tones
-  if (darkColors && color > 15)
-    maxTone = 9;
+    var color = djb2(s) % maxColor;
+    //If color is a dark color, don't include accent tones
+    if (darkColors && color > 15)
+      maxTone = 9;
 
-  var tone = djb2(s) % maxTone;
+    var tone = djb2(s) % maxTone;
+    return DEFAULT_PALETTE[tone][color];
+  } else {
+    console.log("Error: String not valid");
+  }
 
-  return DEFAULT_PALETTE[tone][color];
 }
 
 function djb2(str) {
