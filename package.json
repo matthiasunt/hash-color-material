@@ -1,0 +1,17 @@
+{
+  "name": "hash-color",
+  "version": "1.0.0",
+  "description": "Hashs a string or a number to a material color hex code.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test.js"
+  },
+  "author": "Matthias Unterfrauner",
+  "license": "MIT",
+  "keywords": [
+    "color",
+    "colour",
+    "hash",
+    "material"
+  ]
+}
