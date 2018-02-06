@@ -4,11 +4,11 @@ Hashes a string or a number to a [material color](https://material.io/guidelines
 ## Get started
 First:
 ```
-npm install hash-color
+npm install hash-material-color
 ```
 Then:
 ```
-var hashColor = require('hash-color');
+var hashColor = require('hash-material-color');
 console.log(hashColor.getColorFromString('Hello world!'));
 ```
 ## Usage

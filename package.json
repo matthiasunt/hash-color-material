@@ -1,5 +1,5 @@
 {
-  "name": "@mattunt/hash-color",
+  "name": "hash-material-color",
   "version": "1.0.0",
   "description": "Hashes a string or a number to a material color hex code.",
   "main": "index.js",
