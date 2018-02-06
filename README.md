@@ -1,4 +1,4 @@
-# hash-color
+# hash-color-material
 Hashes a string or a number to a [material color](https://material.io/guidelines/style/color.html#color-color-palette) hex code.
 
 ## Get started
