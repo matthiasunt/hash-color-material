@@ -1,6 +1,6 @@
 {
   "name": "hash-color-material",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Hashes a string or a number to a material color hex code.",
   "main": "index.js",
   "scripts": {
