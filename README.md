@@ -23,13 +23,13 @@ hashColor.getColorFromString(str, darkColors, accentColors)
 ```
 Hashes the passed string to a material color hex code.
 * `str` (string): The string which gets hashed to a material color hex code
-* `darkColors` (boolean, optional): Whether to include brown, grey and blue-grey (default: true)
-* `accentColors` (boolean, optional): Whether to include accent colors (default: true)
+* `darkColors` (boolean): Whether to include brown, grey and blue-grey (optional, default: true)
+* `accentColors` (boolean): Whether to include accent colors (optional, default: true)
 
 ```
 hashColor.getColorFromNumber(number, darkColors, accentColors)
 ```
 Hashes the passed string to a material color hex code.
 * `number` (number): The number which gets hashed to a material color hex code
-* `darkColors` (boolean): Whether to include brown, grey and blue-grey (default: true)
-* `accentColors` (boolean): Whether to include accent colors (default: true)
+* `darkColors` (boolean): Whether to include brown, grey and blue-grey (optional, default: true)
+* `accentColors` (boolean): Whether to include accent colors (optional, default: true)
