@@ -1,17 +1,11 @@
-/**
-    s: String to hash
-    darkColors: Whether to include brown, grey and blue-grey?
-    accentColors: Whether to include accent colors (colors with prefix 'A')?
-*/
-exports.getColorFromString = function(s, darkColors = true, accentColors = true) {
-  return getColorFromString(s, darkColors);
-}
-exports.getColorFromNumber = function(x, darkColors, accentColors) {
-  return getColorFromString(x + '', darkColors);
-}
+'use strict';
 
-/* Helpers */
-function getColorFromString(s, darkColors, accentColors) {
+/*
+  str (string): The string which gets hashed to a material color hex code
+  darkColors (boolean): Whether to include brown, grey and blue-grey (optional, default: true)
+  accentColors (boolean): Whether to include accent colors (optional, default: true)
+*/
+function getColorFromString(s, darkColors = true, accentColors = true) {
   if (s && s.length > 0) {
     var maxColor = darkColors ? 18 : 15;
     var maxTone = accentColors ? 13 : 9;
@@ -26,8 +20,16 @@ function getColorFromString(s, darkColors, accentColors) {
   } else {
     console.log("Error: String not valid");
   }
-
 }
+/*
+  x (number): The number which gets hashed to a material color hex code
+  darkColors (boolean): Whether to include brown, grey and blue-grey (optional, default: true)
+  accentColors (boolean): Whether to include accent colors (optional, default: true)
+*/
+function getColorFromNumber(x, darkColors, accentColors) {
+  return getColorFromString(x + '', darkColors, accentColors);
+}
+
 
 function djb2(str) {
   var hash = 5381;
@@ -38,6 +40,10 @@ function djb2(str) {
   return Math.abs(hash);
 }
 
+module.exports = {
+  getColorFromString: getColorFromString,
+  getColorFromNumber: getColorFromNumber
+};
 
 
 const DEFAULT_PALETTE = [
